@@ -1,0 +1,85 @@
+@use "../abstracts/" as *;
+@use "../base/fonts" as *;
+
+.reviews {
+  margin-bottom: 2.2rem;
+
+  @include mq {
+    display: flex;
+    gap: 7.6rem;
+  }
+
+  &__content {
+    margin-bottom: 2.5rem;
+
+    @include mq {
+      margin-bottom: 2.25rem;
+    }
+
+    &--heading {
+      margin: auto;
+      line-height: 0.8;
+      margin-bottom: 1.42rem;
+      letter-spacing: -1.25;
+      width: 20rem;
+
+      @include mq {
+        width: 25rem;
+        font-size: 3.5rem;
+        margin: 0 0 1.75rem 0;
+        letter-spacing: -1.9;
+        line-height: 0.85;
+      }
+    }
+
+    &--paragraph {
+      line-height: 1.3;
+      color: $grey;
+      letter-spacing: -0.5;
+
+      @include mq {
+        width: 28rem;
+      }
+    }
+  }
+
+  &__cards {
+    @include mq {
+      margin-top: 1.75rem;
+    }
+    &--container {
+      width: 100%;
+      height: 4.75rem;
+      background-color: $lightGrey;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.9rem;
+
+      @include mq {
+        width: 27.5rem;
+        height: 3.5rem;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        padding-left: 2rem;
+        gap: 2rem;
+
+        &:nth-child(2) {
+          margin-left: 3rem;
+        }
+
+        &:nth-child(3) {
+          margin-left: 6rem;
+        }
+      }
+
+      &__stars {
+        display: flex;
+        gap: 0.5rem;
+      }
+    }
+  }
+}

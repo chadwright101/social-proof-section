@@ -1,0 +1,68 @@
+@use "../abstracts/" as *;
+@use "../base/fonts" as *;
+
+.cards {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+
+  @include mq {
+    flex-flow: row nowrap;
+    gap: 2rem;
+  }
+
+  &__block {
+    background-color: $magenta;
+    padding: 2.5rem 2rem 2rem 2rem;
+    border-radius: 0.5rem;
+
+    @include mq {
+      padding: 2.5rem 2rem;
+
+      &:nth-child(1) {
+        width: 69.25rem;
+      }
+
+      &:nth-child(2) {
+        translate: 0 1rem;
+      }
+      &:nth-child(3) {
+        translate: 0 2rem;
+      }
+    }
+
+    p {
+      color: $white;
+      font-size: 1rem;
+    }
+
+    &--profile {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.75rem;
+
+      img {
+        width: 40px;
+        border-radius: 100%;
+      }
+
+      p {
+        line-height: 1.25;
+        text-align: left;
+        letter-spacing: 0.5;
+      }
+      span {
+        color: $pink;
+      }
+    }
+
+    &--paragraph {
+      text-align: left;
+      letter-spacing: 0.25;
+
+      p {
+        line-height: 1.35;
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@use "./variables" as *;
+
+@mixin mq {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
